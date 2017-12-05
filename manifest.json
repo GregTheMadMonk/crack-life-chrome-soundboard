@@ -27,6 +27,7 @@
 		"activeTab",
 		"tabs",
 		"downloads",
-		"notifications"
+		"notifications",
+		"storage"
 	]
 }

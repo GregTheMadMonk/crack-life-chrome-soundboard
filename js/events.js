@@ -8,6 +8,11 @@ daud = new Audio("../sound/dload.wav");
 var volume = 1.0;
 var tvolume;
 
+chrome.storage.sync.get({ vol: 1.0, tvol: 0.0 }, function(data) {
+	volume = data.vol;
+	tvolume = data.tvol;
+});
+
 function sleep(ms) {
 ms += new Date().getTime();
 while (new Date() < ms){}
@@ -20,6 +25,7 @@ chrome.runtime.onMessage.addListener(function(request, sender, callback) {
 		if (request.name > 1) volume = 1;
 		else if (request.name < 0) volume = 0;
 			else volume = request.name;
+		chrome.storage.sync.set({ vol: volume, tvol: tvolume });
 	}
 	if (request.type == 'mute')
 	{
@@ -28,6 +34,7 @@ chrome.runtime.onMessage.addListener(function(request, sender, callback) {
 			tvolume = volume;
 			volume = 0.0;	
 		}
+		chrome.storage.sync.set({ vol: volume, tvol: tvolume });
 	}
 	if (request.type == 'get_mute')
 	{
