@@ -4,6 +4,7 @@
 	"name":				"CrackSoundBoard",
 	"description":			"Sounds from your favorite mod are now going to your browser!",
 	"version":			"1.0",
+	"icons":			{"64": "img/icon.png" },
 	"content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'",
 	
 	"content_scripts": [
