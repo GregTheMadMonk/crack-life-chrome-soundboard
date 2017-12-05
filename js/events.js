@@ -33,13 +33,6 @@ function ( tabId, changeInfo, tab )
 }
 );
 
-chrome.browserAction.onClicked.addListener(
-	function(tab)
-	{
-		(new Audio("../sound/doyou.wav")).play();
-	}
-);
-
 chrome.downloads.onChanged.addListener(
 	function (downloadItem) {
 		daud.currentTime = 0;
@@ -53,7 +46,7 @@ chrome.downloads.onChanged.addListener(
 		{		
 			daud.pause();
 		
-			(new Audio("../sound/muted.wav")).play();
+			(new Audio("../sound/cancelled.wav")).play();
 		}
 	}
 );
