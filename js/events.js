@@ -5,7 +5,7 @@ audio.play();*/
 var daud;
 daud = new Audio("../sound/dload.wav");
 
-var volume = 1.0;
+var volume = 0.0;
 var tvolume;
 
 chrome.storage.sync.get({ vol: 1.0, tvol: 0.0 }, function(data) {
