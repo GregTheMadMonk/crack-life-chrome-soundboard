@@ -10,22 +10,27 @@
 		<p><small>Sounds from your favorite mod are now going to your browser!</small></p>
 		</div>
 	</div>
-	<hr>
-	<div class=content>
-		<table>
-		<tr><td>For feedback I can be reached at:</td></tr>
-		<tr><td><li>Email: </td><td><button id="l1" style="width: 100%">✉ yagreg7@gmail.com</button></td></tr>
-		<tr><td><li>GitHub: </td><td><button id="l2" style="width: 100%"><img align=center width="15" height="15" src="../img/me.png"/>&nbsp;GregTheMadMonk↩</button></td></tr>
-		</table>
-	</div>
+	
 
 	<hr>
 
 	<div class=content>
 		<h2>Settings</h2>
 		<table>
-		<tr><td>Volume (from 0 to 1): </td><td><input type="text" id="volume"/></td></tr>
-		<tr><td>Mute: </td><td><input type="checkbox" id="mute"/></td></tr>
+		<tr><td>Volume: </td><td>
+				<input type="range" min="0" max="100" value="100" id="volume_slider" class="clcs_volume_slider"/>
+				<input type="hidden" id="volume" class="clcs_volume_value" disabled/>
+				</td></tr>
+		<tr><td>Mute: </td><td><input type="checkbox" id="mute" class="clcs_checkbox"/></td></tr>
+		</table>
+	</div>
+	<hr>
+	<div class=content align=center>
+		<table width=100%><tr><td align=center>
+		<button id="l1" style="width: 85%">✉ yagreg7@gmail.com</button>
+		</td></tr><tr><td align=center>
+		<button id="l2" style="width: 85%"><img align=center width="15" height="15" src="../img/me.png"/>&nbsp;GregTheMadMonk↩</button>
+		</td></tr></table>	
 	</div>
 </div>
 <script src="../js/popup.js"></script>
