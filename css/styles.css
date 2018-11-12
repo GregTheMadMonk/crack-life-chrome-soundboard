@@ -20,6 +20,16 @@ body
 	height:500px;
 }
 
+.clcs_icon
+{
+	transition: all 0.5s ease
+}
+
+.clcs_icon:active
+{
+	transform: scale(3) rotatey(360deg);
+}
+
 .clcs_volume_value
 {
 	background-color: RGBA(255, 255, 255, 0);
